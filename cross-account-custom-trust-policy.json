@@ -1,0 +1,17 @@
+{
+      "Version" : "2012-10-17",
+      "Statement" : [
+        {
+          "Effect" : "Allow",
+          "Action" : "sts:AssumeRole",
+          "Principal" : {
+            "AWS" : "044793339203"
+          },
+          "Condition" : {
+            "StringEquals" : {
+              "sts:ExternalId" : "<enter your databricks account id here>"
+            }
+          }
+        }
+      ]
+    }

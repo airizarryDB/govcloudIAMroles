@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws-us-gov:iam::044793339203:role/unity-catalog-prod-UCMasterRole-1QRFA8SGY15OJ",
+                    "arn:aws-us-gov:iam::<your-aws-account-id>:role/<the-name-of-this-iam-role>"
+                ]
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "sts:ExternalId": "<enter your databricks account id here>"
+                }
+            }
+        }
+    ]
+}
